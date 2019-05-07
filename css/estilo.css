@@ -1,0 +1,51 @@
+body {
+  margin: 0px;
+  box-sizing: border-box;
+  background-color: #f8f8f8;
+}
+
+p {
+  font-family: 14 px roboto;
+}
+
+.logo {
+  background-color: #000000;
+  width: 95px;
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #081c24;
+}
+.logo img {
+  height: auto;
+  margin: 12px;
+  width: 40px;
+}
+
+.buscador {
+  height: 64px;
+}
+.buscador .buscador-search-input {
+  height: 68px;
+  border-style: none;
+  padding-left: 80px;
+}
+.buscador ::placeholder {
+  font-size: 16px;
+  color: #b1aeae;
+}
+
+.header {
+  width: 100vw;
+  background-color: #ffffff;
+  display: flex;
+}
+
+.contenedor {
+  width: 100%;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+/*# sourceMappingURL=estilo.css.map */

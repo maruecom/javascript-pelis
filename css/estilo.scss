@@ -1,0 +1,71 @@
+$primary-color: #fafafa;
+$familia: 14 px roboto;
+$negro: #000000;
+$blanco: #ffffff;
+$font: roboto;
+
+
+
+body{
+    margin: 0px;
+    box-sizing: border-box;
+    background-color: #f8f8f8;
+
+}
+
+p {
+    font-family: $familia;
+}
+
+.logo{
+    background-color: $negro;
+    width: 95px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #081c24;
+
+    img{
+        height: auto;
+        margin: 12px;
+        width: 40px;
+    }
+
+}
+
+.buscador {
+    .buscador-search-input {
+        
+        height: 68px;
+        border-style: none;
+        padding-left:80px;
+    
+    }
+    
+    height: 64px;
+
+    ::placeholder {
+
+        font-size: 16px;
+        color: #b1aeae;
+    
+    }
+
+}
+
+.header{
+    width: 100vw;
+    background-color: $blanco;
+    display: flex;
+    
+}
+
+.contenedor{
+    width:100%;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+
+// armarme archivos específicos para colores, variables o secciones específica
