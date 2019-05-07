@@ -8,14 +8,23 @@ p {
   font-family: 14 px roboto;
 }
 
+.header {
+  width: 100vw;
+  background-color: #ffffff;
+  display: flex;
+  
+}
+
 .logo {
   background-color: #000000;
-  width: 95px;
+  width: 88px;
   height: 75px;
   display: flex;
   align-items: center;
   justify-content: center;
   background: #081c24;
+  position: fixed;
+  z-index: 16;
 }
 .logo img {
   height: auto;
@@ -24,28 +33,71 @@ p {
 }
 
 .buscador {
-  height: 64px;
+  height: 73px;
+  width: 100vw;
 }
 .buscador .buscador-search-input {
-  height: 68px;
+  height: 73px;
   border-style: none;
-  padding-left: 80px;
+  padding-left: 200px;
+  width: 100vw;
+  z-index: 15;
+  position: fixed;
 }
 .buscador ::placeholder {
   font-size: 16px;
   color: #b1aeae;
 }
 
-.header {
-  width: 100vw;
-  background-color: #ffffff;
+
+.cont {
+  width: 88px;
+  background-color: #fff;
+  height: 100vh;
   display: flex;
+  position: fixed;
+  flex-direction: column;
 }
 
-.contenedor {
+.caja1 {
+
+  width: 88px;
+  border-bottom: 1px solid  #dbd7d7;
+  height: 88px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.batman {
+
+  background-color: red;
+  width: 100vw;
+  height: 68vh;
+  background-image: url("../img/batman.jpg");
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  
+
+}
+
+.txt-batman {
+  z-index: 17;
+  font-family: roboto;
+}
+
+.batman:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  flex-direction: row;
-  justify-content: flex-start;
+  height: 100%;
+  background: hsla(0,0%,97%,.7);
 }
-
 /*# sourceMappingURL=estilo.css.map */
