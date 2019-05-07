@@ -57,16 +57,19 @@ p {
   display: flex;
   position: fixed;
   flex-direction: column;
+  cursor: pointer;
 }
 
 .caja1 {
 
   width: 88px;
   border-bottom: 1px solid  #dbd7d7;
-  height: 88px;
+  height: 95px;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
 
 }
 
@@ -99,5 +102,30 @@ p {
   width: 100%;
   height: 100%;
   background: hsla(0,0%,97%,.7);
+}
+
+#icon_popular path {
+  fill: #000;
+  width: 25px;
+  
+}
+
+#icon_popular {
+
+  width: 25px;
+  height: 25px;
+
+}
+
+.title {
+
+  font-size: 10px;
+  justify-content: center;
+  align-items: center;
+  font-family: roboto;
+  letter-spacing: 1px;
+  padding-top: 5px;
+  text-align: center;
+
 }
 /*# sourceMappingURL=estilo.css.map */
