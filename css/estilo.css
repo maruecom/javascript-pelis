@@ -102,8 +102,9 @@ p {
   top: 0;
   left: 0;
   width: 100%;
-  height: 80vh;
+  height: 87vh;
   background: hsla(0,0%,97%,.7);
+  margin-left: 18px;
 }
 
 #icon_popular path {
@@ -147,7 +148,7 @@ p {
  justify-content: space-between;
  padding: 20px 200px;
  font-family: Roboto,sans-serif;
- font-size: 6px;
+ font-size: 8px;
  letter-spacing: 1px;
  background-color:#f3f3f3;
  color: #989494;
@@ -156,5 +157,20 @@ p {
 
 }
 
+#view {
 
+  font-size: 8px;
+
+}
+
+.cont-peli {
+
+  display: flex;
+  flex-direction: row;
+  align-content: space-between;
+  flex-wrap: wrap;
+  height: 100vh;
+  width: 100vw;
+
+}
 /*# sourceMappingURL=estilo.css.map */
