@@ -103,3 +103,17 @@ input.addEventListener('keypress', function (event) {
 }
 
 }
+
+
+
+fetch()
+.then(res => res.json())
+.the (movies => {
+  const pelis = movies.map( movies =>{
+    return "<li>
+    <img src="${dia""
+  })
+})
+
+
+.slice (0,5) para que me queden 5 elementos

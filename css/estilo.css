@@ -5,6 +5,14 @@ body {
   
 }
 
+.desaparece{
+  display:none;
+}
+
+.aparece{
+  display:block;
+}
+
 p {
   font-family: 14 px roboto;
 }
