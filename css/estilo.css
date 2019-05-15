@@ -68,6 +68,7 @@ p {
   flex-direction: column;
   cursor: pointer;
   z-index: 20;
+  
 }
 
 .caja1 {
@@ -145,7 +146,6 @@ p {
 .after-batman {
 
   height: 100vh;
-  background-color: #f3f3f3;
   width: 100vw;
 
 }
@@ -177,15 +177,16 @@ p {
   flex-direction: row;
   align-content: space-between;
   flex-wrap: wrap;
-  height: 100vh;
+  /*height: 58vh;*/
   width: 100vw;
-  margin-left: 145px;
+  margin-left: 300px;
+  margin-top: 50px;
 
 }
 
 .peli {
 
-  width: 100px;
+  width: 300px;
   height: auto;
 
 }
@@ -195,6 +196,14 @@ img {
   width: 200px;
   height: auto;
 
+}
+
+
+h1.titu-peli {
+  font-family: roboto;
+  font-size: 12px;
+  /* text-align: center; */
+  color: #949090;
 }
 
 
