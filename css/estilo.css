@@ -104,15 +104,16 @@ p {
   font-family: roboto;
 }
 
-.batman:before {
+.batman::before {
+
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
+
   width: 100%;
   height: 81vh;
   background: hsla(0,0%,97%,.7);
-  margin-left: 18px;
+
+
 }
 
 #icon_popular path {
@@ -195,4 +196,26 @@ img {
   height: auto;
 
 }
+
+
+/*media query*/
+
+@media only screen and (max-width: 600px) {
+  .cont {
+    display: none;
+  }
+
+  .fas.fa-bars{ height: auto; margin-right: 20px;margin-top: 20px;display: block;} 
+  .icono{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    z-index: 40;
+  }
+  
+  
+  
+}
+
+
 /*# sourceMappingURL=estilo.css.map */
