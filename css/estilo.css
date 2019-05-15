@@ -179,6 +179,21 @@ p {
   flex-wrap: wrap;
   height: 100vh;
   width: 100vw;
+  margin-left: 145px;
+
+}
+
+.peli {
+
+  width: 100px;
+  height: auto;
+
+}
+
+img {
+
+  width: 200px;
+  height: auto;
 
 }
 /*# sourceMappingURL=estilo.css.map */
