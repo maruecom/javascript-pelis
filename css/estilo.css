@@ -173,20 +173,22 @@ p {
 
 .cont-peli {
 
-  display: flex;
-  flex-direction: row;
-  align-content: space-between;
-  flex-wrap: wrap;
-  /*height: 58vh;*/
-  width: 100vw;
-  margin-left: 300px;
-  margin-top: 50px;
+ 
+
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    margin-left: 170px;
+    margin-top: 50px;
+    justify-content: flex-start;
+    align-items: center;
+
 
 }
 
 .peli {
 
-  width: 300px;
+  width: 240px;
   height: auto;
 
 }
