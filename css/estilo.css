@@ -177,7 +177,6 @@ p {
 
     display: flex;
     flex-direction: row;
-    width: 100vw;
     margin-left: 170px;
     margin-top: 50px;
     justify-content: flex-start;
