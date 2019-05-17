@@ -33,7 +33,7 @@ p {
   justify-content: center;
   background: #081c24;
   position: fixed;
-  z-index: 16;
+  z-index: 19;
 }
 .logo img {
   height: auto;
@@ -50,7 +50,7 @@ p {
   border-style: none;
   padding-left: 200px;
   width: 100vw;
-  z-index: 15;
+  z-index: 18;
   position: fixed;
 }
 .buscador ::placeholder {
@@ -87,7 +87,6 @@ p {
 .batman {
 
   background-color: red;
-  width: 100vw;
   height: 68vh;
   background-image: url("../img/batman.jpg");
   display:flex;
@@ -180,7 +179,7 @@ p {
     margin-left: 170px;
     margin-top: 50px;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-start;
 
 
 }
@@ -189,6 +188,7 @@ p {
 
   width: 240px;
   height: auto;
+
 
 }
 
@@ -223,8 +223,25 @@ h1.titu-peli {
     z-index: 40;
   }
   
-  
-  
+  .cont-peli {
+
+    display: flex;
+    flex-direction: row;
+    margin-left: 67px;
+    margin-top: 50px;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+.numero5{
+  display: none;
+}
+
+.see-all{
+  padding-left: 74px;
+}
 }
 
 

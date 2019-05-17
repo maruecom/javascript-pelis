@@ -69,6 +69,7 @@ input.addEventListener('keypress', function (event) {
     // pregunto si la persona presionó la tecla enter
  
     if (event.keyCode === 13) {
+        event.preventDefault();
  
       // guardo el valor que la persona ingreso en el input
  
