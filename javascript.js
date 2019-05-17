@@ -17,23 +17,69 @@ fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}`)
           }
           
         }
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
+          
       
       })
-      
 
+
+      fetch(`https://api.themoviedb.org/3/movie/top_rated?api_key=${apiKey}`)
+      .then(res => res.json())
+            .then(data =>{ console.log(data); 
       
+              const movie = data.results;
+              console.log(movie);
+              
+              const div = document.getElementById("pelicula2");
+      
+              for (let i = 0; i < movie.length; i++) {
+                if(i < 5){
+                  div.innerHTML += `<div class="peli"><img src="https://image.tmdb.org/t/p/original${movie[i].poster_path}">
+                  <h1 class="titu-peli">${movie[i].original_title}</h1></div>`
+                }
+                
+              }
+                
+            
+            })
+                  
+            fetch(`https://api.themoviedb.org/3/movie/upcoming?api_key=${apiKey}`)
+            .then(res => res.json())
+                  .then(data =>{ console.log(data); 
+            
+                    const movie = data.results;
+                    console.log(movie);
+                    
+                    const div = document.getElementById("pelicula3");
+            
+                    for (let i = 0; i < movie.length; i++) {
+                      if(i < 5){
+                        div.innerHTML += `<div class="peli"><img src="https://image.tmdb.org/t/p/original${movie[i].poster_path}">
+                        <h1 class="titu-peli">${movie[i].original_title}</h1></div>`
+                      }
+                      
+                    }
+                      
+                  
+                  })
+                            
+                  fetch(`https://api.themoviedb.org/3/movie/now_playing?api_key=${apiKey}`)
+                  .then(res => res.json())
+                        .then(data =>{ console.log(data); 
+                  
+                          const movie = data.results;
+                          console.log(movie);
+                          
+                          const div = document.getElementById("pelicula4");
+                  
+                          for (let i = 0; i < movie.length; i++) {
+                            if(i < 5){
+                              div.innerHTML += `<div class="peli"><img src="https://image.tmdb.org/t/p/original${movie[i].poster_path}">
+                              <h1 class="titu-peli">${movie[i].original_title}</h1></div>`
+                            }
+                            
+                          }
+                            
+                        
+                        })
+
+                       
