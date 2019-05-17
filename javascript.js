@@ -82,4 +82,4 @@ fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}`)
                         
                         })
 
-                       
+                       //para displeynonear secciones ul.style.display = "none";
