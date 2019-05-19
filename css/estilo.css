@@ -188,6 +188,7 @@ p {
 
   width: 240px;
   height: auto;
+  cursor: pointer;
 
 
 }
@@ -195,7 +196,7 @@ p {
 img {
 
   width: 200px;
-  height: auto;
+  height: 300px;
 
 }
 
