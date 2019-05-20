@@ -154,12 +154,14 @@ p {
   display: flex;
  align-items: center;
  justify-content: space-between;
- padding: 20px 200px;
+ padding: 20px 74px;
  font-family: Roboto,sans-serif;
  font-size: 8px;
  letter-spacing: 1px;
 cursor: pointer;
     line-height: 1.6;
+    margin-left: 56px;
+   
    
 
 }
@@ -176,7 +178,7 @@ cursor: pointer;
 
     display: flex;
     flex-direction: row;
-    margin-left: 170px;
+    margin-left: 130px;
     /*margin-top: 50px;*/
     justify-content: flex-start;
     align-items: flex-start;
@@ -187,7 +189,7 @@ cursor: pointer;
 
 .peli {
 
-  width: 240px;
+  width: 220px;
   height: auto;
   cursor: pointer;
 
@@ -201,6 +203,11 @@ img {
 
 }
 
+
+.titu-popu{
+  font-size: 18px;
+  font-family: roboto;
+}
 
 h1.titu-peli {
   font-family: roboto;
@@ -238,7 +245,6 @@ h1.titu-peli {
     display: flex;
     flex-direction: row;
     margin-left: 67px;
-    margin-top: 50px;
     justify-content: flex-start;
     align-items: center;
     flex-wrap: wrap;
