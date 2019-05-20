@@ -117,7 +117,7 @@ p {
 }
 
 #icon_popular path {
-  fill: #b7b5b5;
+  fill: #666565;
   width: 25px;
   
 }
@@ -138,7 +138,7 @@ p {
   letter-spacing: 1px;
   padding-top: 5px;
   text-align: center;
-  color: #b7b5b5;
+  color: #666565;
 
 }
 
@@ -158,7 +158,7 @@ p {
  font-family: Roboto,sans-serif;
  font-size: 8px;
  letter-spacing: 1px;
-
+cursor: pointer;
     line-height: 1.6;
    
 
@@ -211,12 +211,20 @@ h1.titu-peli {
 
 /*media query*/
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 600px) and (min-width: 200px)  {
   .cont {
     display: none;
   }
 
-  .fas.fa-bars{ height: auto; margin-right: 20px;margin-top: 20px;display: block;} 
+
+  .fas.fa-bars {
+
+    height: auto;
+    margin-right: 50px;
+    margin-top: 30px;
+    display: block;
+
+}
   .icono{
     display: flex;
     flex-direction: row;
@@ -240,6 +248,7 @@ h1.titu-peli {
   display: none;
 }
 
+ 
 .see-all{
   padding-left: 74px;
 }
