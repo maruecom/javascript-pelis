@@ -160,7 +160,8 @@ p {
  letter-spacing: 1px;
 cursor: pointer;
     line-height: 1.6;
-    margin-left: 56px;
+    margin-left: 175px;
+    margin-right: 75px;
    
    
 
@@ -188,12 +189,10 @@ cursor: pointer;
 }
 
 .peli {
-
-  width: 220px;
+  width: 210px;
   height: auto;
   cursor: pointer;
-
-
+  margin-left: 120px;
 }
 
 img {
