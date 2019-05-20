@@ -98,7 +98,8 @@ fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}`)
 // aprieto boton lateral popular
 
 
-/*document.getElementById("sec-popular").addEventListener('onclick', function (event){
+/*
+document.getElementById("sec-popular").addEventListener('onclick', function (event){
  
 
   fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&page=${1}`)

@@ -177,9 +177,10 @@ cursor: pointer;
     display: flex;
     flex-direction: row;
     margin-left: 170px;
-    margin-top: 50px;
+    /*margin-top: 50px;*/
     justify-content: flex-start;
     align-items: flex-start;
+    flex-wrap: wrap;
 
 
 }
