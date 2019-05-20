@@ -204,7 +204,7 @@ img {
 }
 
 
-.titu-popu{
+.titu-popu, .titu-top, .titu-now, .titu-up{
   font-size: 18px;
   font-family: roboto;
 }
