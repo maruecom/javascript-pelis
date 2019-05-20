@@ -162,6 +162,7 @@ cursor: pointer;
     line-height: 1.6;
     margin-left: 175px;
     margin-right: 75px;
+    padding-top: 35px;
    
    
 
@@ -192,14 +193,12 @@ cursor: pointer;
   width: 210px;
   height: auto;
   cursor: pointer;
-  margin-left: 120px;
+  margin-left: 108px;
 }
 
 img {
-
-  width: 200px;
-  height: 300px;
-
+  width: 300px;
+  height: 450px;
 }
 
 
@@ -215,6 +214,29 @@ h1.titu-peli {
   color: #949090;
 }
 
+#movie-pop {
+
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.8);
+  position: fixed;
+  z-index: 100;
+  top: 0;
+
+}
+
+.data {
+
+  width: 600px;
+  height: 710px;
+  max-height: 90%;
+  background-color: white;
+  position: absolute;
+  top: calc(50% - 355px);
+  left: calc(50% - 300px);
+  z-index: 101;
+
+}
 
 /*media query*/
 
