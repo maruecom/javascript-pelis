@@ -98,21 +98,24 @@ fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}`)
 // aprieto boton lateral popular
 
 
-/*
-document.getElementById("sec-popular").addEventListener('onclick', function (event){
- 
 
-  fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&page=${1}`)
+document.querySelector("#sec-popular").onclick = function (){
+ 
+  const ocultar = document.getElementsByClassName("batman")[0].classList.add("desaparece");
+  const ocultarDos = document.querySelector("#see-allDos").classList.add("desaparece");
+  const ocultarDosA = document.querySelector("#see-allTres").classList.add("desaparece");
+  const ocultarDosB = document.querySelector("#see-allCuatro").classList.add("desaparece");
+  const ocultarTres = document.getElementById("pelicula2").classList.add("desaparece");
+  const ocultarCuatro = document.getElementById("pelicula3").classList.add("desaparece");
+  const ocultarCinco= document.getElementById("pelicula4").classList.add("desaparece");
+
+  
+  fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}`)
   .then(res => res.json())
         .then(data =>{ console.log(data); 
   
           const movie = data.results;
-          
-  const ocultar = document.getElementsByClassName("batman");
-  ocultar.classList.add("desaparece");
-        
-          
-         
+          const div = document.getElementById("pelicula");
   
           for (let i = 0; i < movie.length; i++) {
             if(i < 20){
@@ -126,7 +129,7 @@ document.getElementById("sec-popular").addEventListener('onclick', function (eve
         })
 
 }
-*/
+
 
 
   
