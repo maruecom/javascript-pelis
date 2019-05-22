@@ -121,11 +121,20 @@ document.querySelector("#sec-popular").onclick = function (){
             if(i < 20){
               div.innerHTML += `<div class="peli"><img src="https://image.tmdb.org/t/p/original${movie[i].poster_path}">
               <h1 class="titu-peli">${movie[i].original_title}</h1></div>`
+             
             }
+            
             
           }
             
-        
+          const boton = document.createElement ("button");
+          const papaBoton = document.querySelector("#pelicula");
+          papaBoton.appendChild(boton);
+          boton.innerHTML = "LOAD MORE";
+          boton.classList.add("boton");
+          document.querySelector("#sec-popular").onclick = function (){
+            
+          }
         })
 
 }
