@@ -283,8 +283,21 @@ document.querySelector("#sec-now").onclick = function (){
 
 
 document.getElementById("logo").onclick = function (){
-  console.log("hola");
+  //console.log("hola");
+
+  // CHEQUEAR ESTE CÓDIGO
+
+  const ocultar = document.getElementsByClassName("batman")[0].classList.remove("desaparece");
+  const ocultarTres = document.getElementById("pelicula").classList.remove("desaparece");
+  const ocultarCuatro = document.getElementById("pelicula3").classList.remove("desaparece");
+  const ocultarCinco= document.getElementById("pelicula2").classList.remove("desaparece");
+  const popu4 = document.getElementById("pelicula4").classList.remove("desaparece");
+  const ocultarDos = document.querySelector("#see-allUno").classList.remove("desaparece");
+  const ocultarDosA = document.querySelector("#see-allTres").classList.remove("desaparece");
+  const ocultarDosB = document.querySelector("#see-allDos").classList.remove("desaparece");
+  const ocultarDosC = document.querySelector("#see-allCuatro").classList.remove("desaparece");
   
+  const div = document.getElementById("pelicula2");
  
   
 
