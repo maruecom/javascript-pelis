@@ -155,6 +155,9 @@ document.querySelector("#sec-top").onclick = function (){
   const ocultarCuatro = document.getElementById("pelicula3").classList.add("desaparece");
   const ocultarCinco= document.getElementById("pelicula4").classList.add("desaparece");
   const popu2 = document.getElementById("pelicula2").classList.remove("desaparece");
+  
+ 
+  
 
  
 
@@ -203,6 +206,8 @@ document.querySelector("#sec-up").onclick = function (){
   const ocultarCuatro = document.getElementById("pelicula2").classList.add("desaparece");
   const ocultarCinco= document.getElementById("pelicula4").classList.add("desaparece");
   const popu3 = document.getElementById("pelicula3").classList.remove("desaparece");
+  
+    
 
   
   fetch(`https://api.themoviedb.org/3/movie/top_rated?api_key=${apiKey}`)
@@ -288,7 +293,7 @@ document.getElementById("logo").onclick = function (){
   // CHEQUEAR ESTE CÓDIGO
 
   const ocultar = document.getElementsByClassName("batman")[0].classList.remove("desaparece");
-  const ocultarTres = document.getElementById("pelicula").classList.remove("desaparece");
+  const ocultarTres = document.getElementById("pelicula").classList.remove("desaparece"); 
   const ocultarCuatro = document.getElementById("pelicula3").classList.remove("desaparece");
   const ocultarCinco= document.getElementById("pelicula2").classList.remove("desaparece");
   const popu4 = document.getElementById("pelicula4").classList.remove("desaparece");
@@ -296,8 +301,9 @@ document.getElementById("logo").onclick = function (){
   const ocultarDosA = document.querySelector("#see-allTres").classList.remove("desaparece");
   const ocultarDosB = document.querySelector("#see-allDos").classList.remove("desaparece");
   const ocultarDosC = document.querySelector("#see-allCuatro").classList.remove("desaparece");
+ 
+ 
   
-  const div = document.getElementById("pelicula2");
  
   
 

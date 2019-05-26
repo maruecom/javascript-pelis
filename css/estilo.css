@@ -109,7 +109,6 @@ p {
 
   content: "";
   position: absolute;
-
   width: 100%;
   height: 68vh;
   background: hsla(0,0%,97%,.7);
@@ -222,7 +221,8 @@ h1.titu-peli {
   position: fixed;
   z-index: 100;
   top: 0;
-  display:none
+  display:flex;
+  /*display:none*/
 
 }
 
@@ -233,12 +233,52 @@ h1.titu-peli {
   max-height: 90%;
   background-color: white;
   position: absolute;
-  top: calc(50% - 355px);
+  top: calc(58% - 355px);
   left: calc(50% - 300px);
   z-index: 101;
 
 }
 
+.peli-foto {
+
+  width: 100%;
+height: 60%;
+position: relative;
+background-size: cover;
+background-repeat: no-repeat;
+background-position: 50% 50%;
+
+ 
+
+}
+
+.peli-foto::before{
+content: "";
+position: absolute;
+width: 100%;
+height: 96%;
+background: hsla(0, 0%, 9.4%, 0.8);
+}
+
+.bg-modal img {
+
+  width: 100%;
+  height: auto;
+  
+
+}
+
+.poster {
+
+  width: 200px;
+  height: auto;
+  position: absolute;
+  z-index: 200;
+  padding: 70px;
+      padding-top: 70px;
+  padding-top: 120px;
+
+}
 
 .boton {
 
@@ -287,9 +327,15 @@ h1.titu-peli {
     display: flex;
     flex-direction: row;
     margin-left: 67px;
-    justify-content: flex-start;
-    align-items: center;
     flex-wrap: wrap;
+
+}
+
+.peli {
+
+  width: 38%;
+  height: auto;
+  cursor: pointer;
 
 }
 
@@ -297,6 +343,11 @@ h1.titu-peli {
   display: none;
 }
 
+.peli:last-child {
+
+ display:none;
+  
+  }
  
 #see-allUno, #see-allDos, #see-allTres, #see-allCuatro{
   padding-left: 74px;
