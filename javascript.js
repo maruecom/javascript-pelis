@@ -353,8 +353,9 @@ document.getElementById("logo").onclick = function (){
 
 // buscador pelis input
 
+/*
 const input = document.querySelector('.buscador-search-input');
-/*const title = document.querySelector('.movie-info .title');
+const title = document.querySelector('.movie-info .title');
 const rated = document.querySelector('#rated');
 const year = document.querySelector('#year');
 const genre = document.querySelector('#genre');
@@ -363,7 +364,7 @@ const writtenBy = document.querySelector('.movie-info .written-by span');
 const directedBy = document.querySelector('.movie-info .directed-by span');
 const starring = document.querySelector('.movie-info .starring span');
 const image = document.querySelector('#movie .foto img');
-const poster = document.querySelector('.poster-blur img' );*/
+const poster = document.querySelector('.poster-blur img' );
 
 input.addEventListener('keypress', function (e) {
     if (e.keyCode === 13) {
@@ -373,7 +374,7 @@ input.addEventListener('keypress', function (e) {
             .then(movie => {
               console.log("hola");
               
-                /*title.innerText = movie.Title;
+                title.innerText = movie.Title;
                 rated.innerText = movie.Rated;
                 year.innerText = movie.Year;
                 genre.innerText = movie.Genre;
@@ -382,10 +383,21 @@ input.addEventListener('keypress', function (e) {
                 directedBy.innerText = movie.Director;
                 starring.innerText = movie.Actors;
                 image.src = movie.Poster;
-                poster.src = movie.Poster;*/
+                poster.src = movie.Poster;
             })
     }
-});
+});*/
+
+// Menú hamburguesa
+
+document.querySelector(".fas.fa-bars").onclick = function (){
+  //console.log("hola");
+
+
+
+  const botonesMobile = document.querySelector(".modal-mobile").classList.remove("desaparece");
+}
+
 
 
                        //para displeynonear secciones ul.style.display = "none";
