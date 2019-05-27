@@ -525,12 +525,75 @@ document.querySelector(".popu").onclick = function (){
                         )}                   
 
 
-
+// click en pelicula para que aparezca el modal
 
    document.querySelector("#pelicula").onclick = function (){
      const modal = document.querySelector("#movie-pop").classList.remove("desaparece");
-     console.log("hola");
-     
+
+     fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}`)
+                  .then(res => res.json())
+                        .then(data =>{ console.log(data); 
+                  
+                          const movie = data.results;
+                          const modal = document.getElementById("movie-pop");
+                  
+                          for(let i=0; i < movie.length; i++ )  {
+                            
+                            const pelititu = document.querySelector(".peli-titu");
+                            pelititu.innerHTML += `<h1 class="peli-titu">${movie[i].original_title}</h1></div>`
+                        
+                            sinopsis.innerHTML += `<div class="sinopsis">${movie[i].overview}</div>`
+                            genero.innerHTML += `<span class="bajada-titu">${movie[i].genre_ids}</span>`
+                            release.innerHTML += `<span class="bajada-titu">${movie[i].release_date}</span>`
+                            poster.innerHTML +=  `<div class="poster"><img class="poster-modal" src="https://image.tmdb.org/t/p/original${movie[i].poster_path}"></div>`
+                          }      
+
+
+                          
+                    
+
+
+     document.querySelector("#cruz").onclick = function (){
+      const modal = document.querySelector("#movie-pop").classList.add("desaparece");
+
+
+     }
+    
+                        } ) }
+     /*
+const input = document.querySelector('.buscador-search-input');
+const title = document.querySelector('.movie-info .title');
+const rated = document.querySelector('#rated');
+const year = document.querySelector('#year');
+const genre = document.querySelector('#genre');
+const description = document.querySelector('.movie-info .description');
+const writtenBy = document.querySelector('.movie-info .written-by span');
+const directedBy = document.querySelector('.movie-info .directed-by span');
+const starring = document.querySelector('.movie-info .starring span');
+const image = document.querySelector('#movie .foto img');
+const poster = document.querySelector('.poster-blur img' );
+
+input.addEventListener('keypress', function (e) {
+    if (e.keyCode === 13) {
+        const movieName = input.value;
+        fetch(`https://www.omdbapi.com/?apikey=2fb7569a&t=${movieName}`)
+            .then(res => res.json())
+            .then(movie => {
+              console.log("hola");
+              
+                title.innerText = movie.Title;
+                rated.innerText = movie.Rated;
+                year.innerText = movie.Year;
+                genre.innerText = movie.Genre;
+                description.innerText = movie.Plot;
+                writtenBy.innerText = movie.Writer;
+                directedBy.innerText = movie.Director;
+                starring.innerText = movie.Actors;
+                image.src = movie.Poster;
+                poster.src = movie.Poster;
+            })
+    }
+});*/
 
 
 
@@ -538,7 +601,7 @@ document.querySelector(".popu").onclick = function (){
 
 
 
-   }
+
 
 
 //para displeynonear secciones ul.style.display = "none"
