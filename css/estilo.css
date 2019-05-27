@@ -263,6 +263,7 @@ h1.titu-peli {
   background-position: 50% 50%;
   position: absolute;
   top: 0;
+  display: flex;
 }
 
 .peli-foto::before{
@@ -318,6 +319,31 @@ background: hsla(0, 0%, 9.4%, 0.8);
     color: #cb7171;
     margin-bottom: 10px;
     padding-top: 100px;
+
+}
+
+.bajada-titu {
+
+  font-family: roboto;
+
+}
+
+.fas.fa-times {
+ 
+
+    z-index: 300;
+    color: #fff;
+    justify-content: flex-end;
+    cursor: pointer;
+    display: block;
+    position: absolute;
+    top: 22px;
+    right: 0;
+    border: 0;
+    width: 40px;
+    height: 40px;
+  
+
 
 }
 

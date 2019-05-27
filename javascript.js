@@ -524,4 +524,38 @@ document.querySelector(".popu").onclick = function (){
                 
                         )}                   
 
+
+
+  
+
+
+
+
+function modal (){
+
+ const modalPeli = document.querySelector("#movie-pop");
+ modalPeli.classList.remove("desaparece")
+ fetch(`http://api.themoviedb.org/3/movie/popular?api_key=${apiKey}`)
+      .then(res => res.json())
+      .then(data => {
+        const movie = data.results;
+    
+        
+
+
+
+        ///INTENTO OBTENER EL ID DE LA CAJITA EN LA QUE HAGO CLICK Y ME TIRA EL DE LA ULTIMA CAJITA DE LA PAGINA(EL DE LA POSICION 19)
+      for(let i=0; i < indice.length; i++ )  {
+        const tituloPeli = document.querySelector('.peli-titu');
+        tituloPeli.innerHTML = indice[i].id;
+      }      
+
+
+      })
+
+
+
+
+ 
+}
 //para displeynonear secciones ul.style.display = "none"
