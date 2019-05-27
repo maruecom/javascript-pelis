@@ -5,6 +5,10 @@ body {
   
 }
 
+.color{
+  background-color: #f8f8f8;
+}
+
 .desaparece{
   display:none!important;
 }
@@ -435,6 +439,12 @@ cursor: pointer;
 
 }
 
+.batman{
+  height: 48vh;
+}
+.batman::before{
+  height: 48vh;
+}
 }
 
 
