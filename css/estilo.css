@@ -160,8 +160,8 @@ p {
  letter-spacing: 1px;
 cursor: pointer;
     line-height: 1.6;
-    margin-left: 175px;
-    margin-right: 75px;
+    margin-left: 50px;
+    margin-right: 0px;
     padding-top: 35px;
    
    
@@ -296,7 +296,9 @@ background: hsla(0, 0%, 9.4%, 0.8);
 }
 
 
-
+.modal-mobile{
+  display:none;
+}
 
 
 /*media query*/
@@ -306,13 +308,13 @@ background: hsla(0, 0%, 9.4%, 0.8);
     display: none;
   }
 
-
   .fas.fa-bars {
 
     height: auto;
     margin-right: 50px;
     margin-top: 30px;
     display: block;
+    margin-left: 492px;
 
 }
   .icono{
@@ -352,6 +354,86 @@ background: hsla(0, 0%, 9.4%, 0.8);
 #see-allUno, #see-allDos, #see-allTres, #see-allCuatro{
   padding-left: 74px;
 }
+
+.modal-mobile {
+
+  width: 100vw;
+  height: 250px;
+  background-color: #fff;
+  z-index: 300;
+  display: flex;
+align-items: center;
+    flex-wrap: wrap;
+
+}
+
+
+#icon_popular {
+
+  width: 25px;
+  height: 25px;
+  padding-left: 12px;
+
+}
+
+.popu {
+
+  width: 50px;
+  height: 50px;
+  padding: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  margin-right: 100px;
+    margin-left: 100px;
+    cursor: pointer;
+
+
+}
+
+.rated {
+
+  width: 50px;
+  height: 50px;
+  padding: 32px;
+      padding-top: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  padding-top: 20px;
+  margin-right: 100px;
+margin-left: 0px;
+cursor: pointer;
+ 
+
+}
+
+.now {
+
+  width: 50px;
+  height: 50px;
+  padding: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  margin-right: 100px;
+margin-left: 100px;
+cursor: pointer;
+
+}
+
+.up {
+
+  width: 50px;
+  height: 50px;
+  padding: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  cursor: pointer;
+
+}
+
 }
 
 
