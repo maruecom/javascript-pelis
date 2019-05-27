@@ -543,8 +543,6 @@ document.querySelector(".popu").onclick = function (){
                             pelititu.innerHTML = `<h1 class="peli-titu">${movie[i].original_title}</h1></div>`
                             const sinopsis = document.querySelector(".sinopsis") ;                       
                             sinopsis.innerHTML = `<div class="sinopsis">${movie[i].overview}</div>`
-                            const peli = document.querySelector(".peli-foto");
-                            peli.innerHTML = `<img class="poster-modal" src=""https://image.tmdb.org/t/p/original${movie[i].poster_path}""></img>`
                           
                            
                             
