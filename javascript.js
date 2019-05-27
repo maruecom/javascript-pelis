@@ -540,27 +540,27 @@ document.querySelector(".popu").onclick = function (){
                           for(let i=0; i < movie.length; i++ )  {
                             
                             const pelititu = document.querySelector(".peli-titu");
-                            pelititu.innerHTML += `<h1 class="peli-titu">${movie[i].original_title}</h1></div>`
+                            pelititu.innerHTML = `<h1 class="peli-titu">${movie[i].original_title}</h1></div>`
                         
-                            sinopsis.innerHTML += `<div class="sinopsis">${movie[i].overview}</div>`
-                            genero.innerHTML += `<span class="bajada-titu">${movie[i].genre_ids}</span>`
-                            release.innerHTML += `<span class="bajada-titu">${movie[i].release_date}</span>`
-                            poster.innerHTML +=  `<div class="poster"><img class="poster-modal" src="https://image.tmdb.org/t/p/original${movie[i].poster_path}"></div>`
+                            sinopsis.innerHTML = `<div class="sinopsis">${movie[i].overview}</div>`
+                            genero.innerHTML = `<span class="bajada-titu">${movie[i].genre_ids}</span>`
+                            release.innerHTML = `<span class="bajada-titu">${movie[i].release_date}</span>`
+                            poster.innerHTML =  `<div class="poster"><img class="poster-modal" src="https://image.tmdb.org/t/p/original${movie[i].poster_path}"></div>`
                           }      
 
-
-                          
-                    
-
-
-     document.querySelector("#cruz").onclick = function (){
-      const modal = document.querySelector("#movie-pop").classList.add("desaparece");
-
-
-     }
-    
                         } ) }
-     /*
+     
+     
+     
+                        document.querySelector("#cruz").onclick = function (){
+                          const modal = document.querySelector("#movie-pop").classList.add("desaparece");
+                    
+                    
+                         }
+     
+     
+                        /*
+     
 const input = document.querySelector('.buscador-search-input');
 const title = document.querySelector('.movie-info .title');
 const rated = document.querySelector('#rated');
