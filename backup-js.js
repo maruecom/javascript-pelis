@@ -1,5 +1,6 @@
 
 const apiKey = "a62c1b6c10babde2206b6dab88c018a0";
+const movieId = [];
 
 
 
@@ -46,7 +47,7 @@ todosFetch (`https://api.themoviedb.org/3/movie/now_playing?api_key=${apiKey}`, 
 
 fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}`)
 .then(res => res.json())
-      .then(data =>{ console.log(data); 
+      .then(data =>{  
 
         const movie = data.results;
         console.log(movie);
@@ -70,7 +71,7 @@ fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}`)
 
       fetch(`https://api.themoviedb.org/3/movie/top_rated?api_key=${apiKey}`)
       .then(res => res.json())
-            .then(data =>{ console.log(data); 
+            .then(data =>{  
       
               const movie = data.results;
               console.log(movie);
@@ -95,7 +96,7 @@ fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}`)
 
             fetch(`https://api.themoviedb.org/3/movie/upcoming?api_key=${apiKey}`)
             .then(res => res.json())
-                  .then(data =>{ console.log(data); 
+                  .then(data =>{ 
             
                     const movie = data.results;
                     console.log(movie);
@@ -121,7 +122,7 @@ fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}`)
 
                   fetch(`https://api.themoviedb.org/3/movie/now_playing?api_key=${apiKey}`)
                   .then(res => res.json())
-                        .then(data =>{ console.log(data); 
+                        .then(data =>{ 
                   
                           const movie = data.results;
                           console.log(movie);
@@ -158,7 +159,7 @@ document.querySelector("#sec-popular").onclick = function (){
   
   fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}`)
   .then(res => res.json())
-        .then(data =>{ console.log(data); 
+        .then(data =>{  
   
           const movie = data.results;
           const div = document.getElementById("pelicula");
@@ -213,7 +214,7 @@ document.querySelector("#sec-top").onclick = function (){
   
   fetch(`https://api.themoviedb.org/3/movie/top_rated?api_key=${apiKey}`)
   .then(res => res.json())
-        .then(data =>{ console.log(data); 
+        .then(data =>{ 
   
           const movie = data.results;
           const div = document.getElementById("pelicula2");
@@ -262,7 +263,7 @@ document.querySelector("#sec-up").onclick = function (){
   
   fetch(`https://api.themoviedb.org/3/movie/top_rated?api_key=${apiKey}`)
   .then(res => res.json())
-        .then(data =>{ console.log(data); 
+        .then(data =>{ 
   
           const movie = data.results;
           const div = document.getElementById("pelicula3");
@@ -312,7 +313,7 @@ document.querySelector("#sec-now").onclick = function (){
   
   fetch(`https://api.themoviedb.org/3/movie/now_playing?api_key=${apiKey}`)
   .then(res => res.json())
-        .then(data =>{ console.log(data); 
+        .then(data =>{ 
   
           const movie = data.results;
           const div = document.getElementById("pelicula4");
@@ -470,7 +471,7 @@ document.querySelector(".popu").onclick = function (){
         document.querySelector(".rated").onclick = function (){
           fetch(`https://api.themoviedb.org/3/movie/top_rated?api_key=${apiKey}`)
           .then(res => res.json())
-                .then(data =>{ console.log(data); 
+                .then(data =>{ ; 
           
                   const movie = data.results;
                   const div = document.getElementById("pelicula2");
@@ -505,7 +506,7 @@ document.querySelector(".popu").onclick = function (){
                 document.querySelector(".now").onclick = function (){
                   fetch(`https://api.themoviedb.org/3/movie/now_playing?api_key=${apiKey}`)
                   .then(res => res.json())
-                        .then(data =>{ console.log(data); 
+                        .then(data =>{ ; 
                   
                           const movie = data.results;
                           const div = document.getElementById("pelicula3");
@@ -542,18 +543,16 @@ crearModal = (div) => {
 
      fetch(`https://api.themoviedb.org/3/movie/${movieId}popular?api_key=${apiKey}`)
                   .then(res => res.json())
-                        .then(data =>{ console.log(data); 
+                        .then(data =>{; 
                   
                           const movie = data.results;
                           const modal = document.getElementById("movie-pop");
                   
                           for(let i=0; i < movie.length; i++ )  {
+                             //console.log(movie[i].id);
 
-                           
-                            
-                            
                             const pelititu = document.querySelector(".peli-titu");
-                            pelititu.innerHTML = `<h1 class="peli-titu">${movie[i].original_title}</h1></div>`
+                            pelititu.innerHTML = `<h1 class="peli-titu" >${movie[i].original_title}</h1></div>`
                             const sinopsis = document.querySelector(".sinopsis") ;                       
                             sinopsis.innerHTML = `<div class="sinopsis">${movie[i].overview}</div>`
                           
@@ -571,8 +570,31 @@ crearModal = (div) => {
                     
                          }
      
-     
-                        /*
+// load more
+const boton = document.querySelector (".boton");
+
+button.addEventListener('click',function (){
+	paginaActual ++;
+	fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&page=${paginaActual}`)
+	.then (res => res.json())
+	.then (data =>{
+		const movie = data.results;
+		const contenedor = document.querySelector('#pelicula');
+		
+
+		for (let i = 5; i < Math.min(movie.length,20); i++) {
+		contenedor.innerHTML += `<div class='wrap'>
+		<div class='img_wrap'>
+			<img class='movie_img'src="https://image.tmdb.org/t/p/original${movie[i].poster_path}"/>
+			<span class='movie_section_title'>${movie[i].original_title}</span>
+		</div>
+	</div>`
+  }
+	})
+});
+
+
+/*
      
 const input = document.querySelector('.buscador-search-input');
 const title = document.querySelector('.movie-info .title');
