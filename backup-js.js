@@ -55,8 +55,9 @@ fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}`)
 
         for (let i = 0; i < movie.length; i++) {
           if(i < 5){
-            div.innerHTML += div.innerHTML += `<div class="peli" id="${movie[i].id}" onclick="crearModal(this)"><img src="https://image.tmdb.org/t/p/original${movie[i].poster_path}">
-            <h1 class="titu-peli">${movie[i].original_title}</h1></div>`
+            div.innerHTML += `<div class="peli" id="${movie[i].id}" onclick="crearModal(this)"><img src="https://image.tmdb.org/t/p/original${movie[i].poster_path}">
+
+             <h1 class="titu-peli">${movie[i].original_title}</h1></div>`
           }
           
         }
@@ -78,8 +79,9 @@ fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}`)
       
               for (let i = 0; i < movie.length; i++) {
                 if(i < 5){
-                  div.innerHTML += div.innerHTML += `<div class="peli" id="${movie[i].id}><img src="https://image.tmdb.org/t/p/original${movie[i].poster_path}">
-                  <h1 class="titu-peli">${movie[i].original_title}</h1></div>`
+                    div.innerHTML += `<div class="peli" id="${movie[i].id}" onclick="crearModal(this)"><img src="https://image.tmdb.org/t/p/original${movie[i].poster_path}">
+
+                    <h1 class="titu-peli">${movie[i].original_title}</h1></div>`
                 }
                 
               }
@@ -102,7 +104,8 @@ fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}`)
             
                     for (let i = 0; i < movie.length; i++) {
                       if(i < 5){
-                        div.innerHTML += div.innerHTML += `<div class="peli" id="${movie[i].id}><img src="https://image.tmdb.org/t/p/original${movie[i].poster_path}">
+                        div.innerHTML += `<div class="peli" id="${movie[i].id}" onclick="crearModal(this)"><img src="https://image.tmdb.org/t/p/original${movie[i].poster_path}">
+
                         <h1 class="titu-peli">${movie[i].original_title}</h1></div>`
                       }
                       
@@ -127,8 +130,9 @@ fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}`)
                   
                           for (let i = 0; i < movie.length; i++) {
                             if(i < 5){
-                              div.innerHTML += div.innerHTML += `<div class="peli" id="${movie[i].id}><img src="https://image.tmdb.org/t/p/original${movie[i].poster_path}">
-                              <h1 class="titu-peli">${movie[i].original_title}</h1></div>`
+                                div.innerHTML += `<div class="peli" id="${movie[i].id}" onclick="crearModal(this)"><img src="https://image.tmdb.org/t/p/original${movie[i].poster_path}">
+
+                                <h1 class="titu-peli">${movie[i].original_title}</h1></div>`
                             }
                             
                           }
@@ -161,8 +165,9 @@ document.querySelector("#sec-popular").onclick = function (){
   
           for (let i = 5; i < movie.length; i++) {
             if(i < 20){
-              div.innerHTML += div.innerHTML += `<div class="peli" id="${movie[i].id}" onclick="crearModal(this)"><img src="https://image.tmdb.org/t/p/original${movie[i].poster_path}">
-              <h1 class="titu-peli">${movie[i].original_title}</h1></div>`
+                div.innerHTML += `<div class="peli" id="${movie[i].id}" onclick="crearModal(this)"><img src="https://image.tmdb.org/t/p/original${movie[i].poster_path}">
+
+                <h1 class="titu-peli">${movie[i].original_title}</h1></div>`
              
             }
             
@@ -215,8 +220,9 @@ document.querySelector("#sec-top").onclick = function (){
   
           for (let i = 5; i < movie.length; i++) {
             if(i < 20){
-              div.innerHTML += div.innerHTML += `<div class="peli" id="${movie[i].id}><img src="https://image.tmdb.org/t/p/original${movie[i].poster_path}">
-              <h1 class="titu-peli">${movie[i].original_title}</h1></div>`
+                div.innerHTML += `<div class="peli" id="${movie[i].id}" onclick="crearModal(this)"><img src="https://image.tmdb.org/t/p/original${movie[i].poster_path}">
+
+                <h1 class="titu-peli">${movie[i].original_title}</h1></div>`
              
             }
             
@@ -263,8 +269,9 @@ document.querySelector("#sec-up").onclick = function (){
   
           for (let i = 5; i < movie.length; i++) {
             if(i < 20){
-              div.innerHTML += `<div class="peli" id="${movie[i].id}"><img src="https://image.tmdb.org/t/p/original${movie[i].poster_path}">
-              <h1 class="titu-peli">${movie[i].original_title}</h1></div>`
+                div.innerHTML += `<div class="peli" id="${movie[i].id}" onclick="crearModal(this)"><img src="https://image.tmdb.org/t/p/original${movie[i].poster_path}">
+
+                <h1 class="titu-peli">${movie[i].original_title}</h1></div>`
              
             }
             
@@ -312,8 +319,9 @@ document.querySelector("#sec-now").onclick = function (){
   
           for (let i = 5; i < movie.length; i++) {
             if(i < 20){
-              div.innerHTML += div.innerHTML += `<div class="peli" id="${movie[i].id}><img src="https://image.tmdb.org/t/p/original${movie[i].poster_path}">
-              <h1 class="titu-peli">${movie[i].original_title}</h1></div>`
+                div.innerHTML += `<div class="peli" id="${movie[i].id}" onclick="crearModal(this)"><img src="https://image.tmdb.org/t/p/original${movie[i].poster_path}">
+
+                <h1 class="titu-peli">${movie[i].original_title}</h1></div>`
              
             }
             
@@ -414,8 +422,9 @@ document.querySelector(".popu").onclick = function (){
   
           for (let i = 5; i < movie.length; i++) {
             if(i < 20){
-              div.innerHTML += div.innerHTML += `<div class="peli" id="${movie[i].id}" onclick="crearModal(this)"><img src="https://image.tmdb.org/t/p/original${movie[i].poster_path}">
-              <h1 class="titu-peli">${movie[i].original_title}</h1></div>`
+                div.innerHTML += `<div class="peli" id="${movie[i].id}" onclick="crearModal(this)"><img src="https://image.tmdb.org/t/p/original${movie[i].poster_path}">
+
+                <h1 class="titu-peli">${movie[i].original_title}</h1></div>`
              
             }
             
@@ -468,8 +477,9 @@ document.querySelector(".popu").onclick = function (){
           
                   for (let i = 5; i < movie.length; i++) {
                     if(i < 20){
-                      div.innerHTML += div.innerHTML += `<div class="peli" id="${movie[i].id}><img src="https://image.tmdb.org/t/p/original${movie[i].poster_path}">
-                      <h1 class="titu-peli">${movie[i].original_title}</h1></div>`
+                        div.innerHTML += `<div class="peli" id="${movie[i].id}" onclick="crearModal(this)"><img src="https://image.tmdb.org/t/p/original${movie[i].poster_path}">
+
+                        <h1 class="titu-peli">${movie[i].original_title}</h1></div>`
                      
                     }
                     
@@ -502,8 +512,9 @@ document.querySelector(".popu").onclick = function (){
                   
                           for (let i = 5; i < movie.length; i++) {
                             if(i < 20){
-                              div.innerHTML += div.innerHTML += `<div class="peli" id="${movie[i].id}><img src="https://image.tmdb.org/t/p/original${movie[i].poster_path}">
-                              <h1 class="titu-peli">${movie[i].original_title}</h1></div>`
+                                div.innerHTML += `<div class="peli" id="${movie[i].id}" onclick="crearModal(this)"><img src="https://image.tmdb.org/t/p/original${movie[i].poster_path}">
+
+                                <h1 class="titu-peli">${movie[i].original_title}</h1></div>`
                              
                             }
                             
