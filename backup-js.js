@@ -180,7 +180,31 @@ document.querySelector("#sec-popular").onclick = function (){
           papaBoton.appendChild(boton);
           boton.innerHTML = "LOAD MORE";
           boton.classList.add("boton");
-          document.querySelector("#sec-popular").onclick = function (){};
+          document.querySelector("#sec-popular").onclick = function (){
+              // load more
+const boton = document.querySelector (".boton");
+
+boton.addEventListener('click',function (){
+	paginaActual ++;
+	fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&page=${paginaActual}`)
+	.then (res => res.json())
+	.then (data =>{ 
+    
+        const movie = data.results;
+        
+		const contenedor = document.querySelector('#pelicula');
+		
+
+		for (let i = 5; i < Math.min(movie.length,20); i++) {
+		contenedor.innerHTML +=  `<div class="peli" id="${movie[i].id}" onclick="crearModal(this)"><img src="https://image.tmdb.org/t/p/original${movie[i].poster_path}">
+
+        <h1 class="titu-peli">${movie[i].original_title}</h1></div>`
+  }
+	})
+});
+          };
+
+          
 
           
         })
@@ -570,27 +594,7 @@ crearModal = (div) => {
                     
                          }
      
-// load more
-const boton = document.querySelector (".boton");
 
-boton.addEventListener('click',function (){
-	paginaActual ++;
-	fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&page=${paginaActual}`)
-	.then (res => res.json())
-	.then (data =>{ console.log(paginaActual);
-    
-        const movie = data.results;
-        
-		const contenedor = document.querySelector('#pelicula');
-		
-
-		for (let i = 5; i < Math.min(movie.length,20); i++) {
-		contenedor.innerHTML +=  `<div class="peli" id="${movie[i].id}" onclick="crearModal(this)"><img src="https://image.tmdb.org/t/p/original${movie[i].poster_path}">
-
-        <h1 class="titu-peli">${movie[i].original_title}</h1></div>`
-  }
-	})
-});
 
 
 /*
