@@ -567,20 +567,54 @@ crearModal = (div) => {
 
      fetch(`https://api.themoviedb.org/3/movie/${movieId}popular?api_key=${apiKey}`)
                   .then(res => res.json())
-                        .then(data =>{; 
+                        .then(data =>{ console.log(movieId);
+                        
                   
                           const movie = data.results;
                           const modal = document.getElementById("movie-pop");
                   
                           for(let i=0; i < movie.length; i++ )  {
+                            if(i < 20){
                              //console.log(movie[i].id);
 
-                            const pelititu = document.querySelector(".peli-titu");
+                           /* const pelititu = document.querySelector(".peli-titu");
                             pelititu.innerHTML = `<h1 class="peli-titu" >${movie[i].original_title}</h1></div>`
                             const sinopsis = document.querySelector(".sinopsis") ;                       
-                            sinopsis.innerHTML = `<div class="sinopsis">${movie[i].overview}</div>`
+                            sinopsis.innerHTML = `<div class="sinopsis">${movie[i].overview}</div>`*/
+
+                         modal.innerHTML = 	`<div class="data">	
+						
+                            <div class="poster">
+                               
+                            </div>	
+                            <div class="data-peli">
+                  
+                              <div class="titular">
+                                <h1 class="peli-titu">${movie[i].original_title}</h1>
+                              </div>
+                  
+                              <div class="sinopsis">${movie[i].overview}
+                                  
+                                      <h1 class="peli-tituUno">Genre</h1>
+                                      <span class="bajada-titu">${movie[i].genre_ids}
+                                        </span>
+                                      <h1 class="peli-tituUno">Release date</h1>
+                                      <span class="bajada-titu">${movie[i].release_date}</span>
+                                    
+                              </div>
+                  
+                            </div>
+                  
+                            <div class= "peli-foto">	
+                            <i class="fas fa-times" id="cruz"></i>
+                          <img class="bg-modal"  src="${movie[i].backdrop_path}"> 
+                            </div>
+                  
+                            
+                  
+                          </div>`
                           
-                           
+                        }   
                             
                           }      
 
@@ -588,7 +622,7 @@ crearModal = (div) => {
      
      
      
-                        document.querySelector("#cruz").onclick = function (){
+                        document.querySelector("#movie-pop").onclick = function (){
                           const modal = document.querySelector("#movie-pop").classList.add("desaparece");
                     
                     

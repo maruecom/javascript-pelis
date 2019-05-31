@@ -176,9 +176,13 @@ document.querySelector("#sec-popular").onclick = function (){
           boton.classList.add("boton");
           document.querySelector("#sec-popular").onclick = function (){};
 
+
+         
+
           
         })
 
+       
 
 
         
@@ -325,9 +329,9 @@ document.querySelector("#sec-now").onclick = function (){
           papaBoton.appendChild(boton);
           boton.innerHTML = "LOAD MORE";
           boton.classList.add("boton");
-          document.querySelector("#sec-now").onclick = function (){
+          /*document.querySelector("#sec-now").onclick = function (){
             
-          }
+          }*/
         })
 
 }
@@ -517,9 +521,9 @@ document.querySelector(".popu").onclick = function (){
                           papaBoton.appendChild(boton);
                           boton.innerHTML = "LOAD MORE";
                           boton.classList.add("boton");
-                          document.querySelector("#sec-now").onclick = function (){
+                          /*document.querySelector("#sec-now").onclick = function (){
                             
-                          }
+                          }*/
                 }
                 
                         )}                   
@@ -538,13 +542,13 @@ document.querySelector(".popu").onclick = function (){
                           const modal = document.getElementById("movie-pop");
                   
                           for(let i=0; i < movie.length; i++ )  {
-                            
+                         
                             const pelititu = document.querySelector(".peli-titu");
                             pelititu.innerHTML = `<h1 class="peli-titu">${movie[i].original_title}</h1></div>`
                             const sinopsis = document.querySelector(".sinopsis") ;                       
                             sinopsis.innerHTML = `<div class="sinopsis">${movie[i].overview}</div>`
                           
-                           
+                          
                             
                           }      
 
@@ -554,6 +558,9 @@ document.querySelector(".popu").onclick = function (){
      
                         document.querySelector("#cruz").onclick = function (){
                           const modal = document.querySelector("#movie-pop").classList.add("desaparece");
+
+
+                         
                     
                     
                          }
