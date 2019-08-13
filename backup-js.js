@@ -1,8 +1,5 @@
-
-const apiKey = "a62c1b6c10babde2206b6dab88c018a0";
+const apiKey = 'a62c1b6c10babde2206b6dab88c018a0';
 const movieId = [];
-
-
 
 /*
 
@@ -36,352 +33,247 @@ todosFetch (`https://api.themoviedb.org/3/movie/upcoming?api_key=${apiKey}`, 'pe
 // --> NOW PLAYING
 todosFetch (`https://api.themoviedb.org/3/movie/now_playing?api_key=${apiKey}`, 'pelicula4')*/
 
-
-
-
-
-
-
-
 // imprimo las 5 primera pelis de la sección popular
 
-fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}`)
-.then(res => res.json())
-      .then(data =>{  
+fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}`).then((res) => res.json()).then((data) => {
+	const movie = data.results;
+	console.log(movie);
 
-        const movie = data.results;
-        console.log(movie);
-        
-        const div = document.getElementById("pelicula");
+	const div = document.getElementById('pelicula');
 
-        for (let i = 0; i < movie.length; i++) {
-          if(i < 5){
-            div.innerHTML += `<div class="peli" id="${movie[i].id}" onclick="crearModal(this)"><img src="https://image.tmdb.org/t/p/original${movie[i].poster_path}">
+	for (let i = 0; i < movie.length; i++) {
+		if (i < 5) {
+			div.innerHTML += `<div class="peli" id="${movie[i].id}" onclick="crearModal(${movie[i]
+				.id})"><img src="https://image.tmdb.org/t/p/original${movie[i].poster_path}">
 
-             <h1 class="titu-peli">${movie[i].original_title}</h1></div>`
-          }
-          
-        }
-          
-      
-      })
+             <h1 class="titu-peli">${movie[i].original_title}</h1></div>`;
+		}
+	}
+});
 
 // imprimo las 5 primera pelis de la sección top rated
 
+fetch(`https://api.themoviedb.org/3/movie/top_rated?api_key=${apiKey}`).then((res) => res.json()).then((data) => {
+	const movie = data.results;
+	console.log(movie);
 
-      fetch(`https://api.themoviedb.org/3/movie/top_rated?api_key=${apiKey}`)
-      .then(res => res.json())
-            .then(data =>{  
-      
-              const movie = data.results;
-              console.log(movie);
-              
-              const div = document.getElementById("pelicula2");
-      
-              for (let i = 0; i < movie.length; i++) {
-                if(i < 5){
-                    div.innerHTML += `<div class="peli" id="${movie[i].id}" onclick="crearModal(this)"><img src="https://image.tmdb.org/t/p/original${movie[i].poster_path}">
+	const div = document.getElementById('pelicula2');
 
-                    <h1 class="titu-peli">${movie[i].original_title}</h1></div>`
-                }
-                
-              }
-                
-            
-            })
+	for (let i = 0; i < movie.length; i++) {
+		if (i < 5) {
+			div.innerHTML += `<div class="peli" id="${movie[i].id}" onclick="crearModal(${movie[i]
+				.id})"><img src="https://image.tmdb.org/t/p/original${movie[i].poster_path}">
 
-            
+                    <h1 class="titu-peli">${movie[i].original_title}</h1></div>`;
+		}
+	}
+});
+
 // imprimo las 5 primera pelis de la sección upcoming
 
+fetch(`https://api.themoviedb.org/3/movie/upcoming?api_key=${apiKey}`).then((res) => res.json()).then((data) => {
+	const movie = data.results;
+	console.log(movie);
 
-            fetch(`https://api.themoviedb.org/3/movie/upcoming?api_key=${apiKey}`)
-            .then(res => res.json())
-                  .then(data =>{ 
-            
-                    const movie = data.results;
-                    console.log(movie);
-                    
-                    const div = document.getElementById("pelicula3");
-            
-                    for (let i = 0; i < movie.length; i++) {
-                      if(i < 5){
-                        div.innerHTML += `<div class="peli" id="${movie[i].id}" onclick="crearModal(this)"><img src="https://image.tmdb.org/t/p/original${movie[i].poster_path}">
+	const div = document.getElementById('pelicula3');
 
-                        <h1 class="titu-peli">${movie[i].original_title}</h1></div>`
-                      }
-                      
-                    }
-                      
-                  
-                  })
- 
+	for (let i = 0; i < movie.length; i++) {
+		if (i < 5) {
+			div.innerHTML += `<div class="peli" id="${movie[i].id}" onclick="crearModal(${movie[i]
+				.id})"><img src="https://image.tmdb.org/t/p/original${movie[i].poster_path}">
 
+                        <h1 class="titu-peli">${movie[i].original_title}</h1></div>`;
+		}
+	}
+});
 
 // imprimo las 5 primera pelis de la sección now playing
 
+fetch(`https://api.themoviedb.org/3/movie/now_playing?api_key=${apiKey}`).then((res) => res.json()).then((data) => {
+	const movie = data.results;
+	console.log(movie);
 
-                  fetch(`https://api.themoviedb.org/3/movie/now_playing?api_key=${apiKey}`)
-                  .then(res => res.json())
-                        .then(data =>{ 
-                  
-                          const movie = data.results;
-                          console.log(movie);
-                          
-                          const div = document.getElementById("pelicula4");
-                  
-                          for (let i = 0; i < movie.length; i++) {
-                            if(i < 5){
-                                div.innerHTML += `<div class="peli" id="${movie[i].id}" onclick="crearModal(this)"><img src="https://image.tmdb.org/t/p/original${movie[i].poster_path}">
+	const div = document.getElementById('pelicula4');
 
-                                <h1 class="titu-peli">${movie[i].original_title}</h1></div>`
-                            }
-                            
-                          }
-                            
-                        
-                        })
+	for (let i = 0; i < movie.length; i++) {
+		if (i < 5) {
+			div.innerHTML += `<div class="peli" id="${movie[i].id}" onclick="crearModal(${movie[i]
+				.id})"><img src="https://image.tmdb.org/t/p/original${movie[i].poster_path}">
+
+                                <h1 class="titu-peli">${movie[i].original_title}</h1></div>`;
+		}
+	}
+});
 
 // aprieto boton lateral popular
 
+document.querySelector('#sec-popular').onclick = function() {
+	const ocultar = document.getElementsByClassName('batman')[0].classList.add('desaparece');
+	const ocultarDos = document.querySelector('#see-allDos').classList.add('desaparece');
+	const ocultarDosA = document.querySelector('#see-allTres').classList.add('desaparece');
+	const ocultarDosB = document.querySelector('#see-allCuatro').classList.add('desaparece');
+	const ocultarTres = document.getElementById('pelicula2').classList.add('desaparece');
+	const ocultarCuatro = document.getElementById('pelicula3').classList.add('desaparece');
+	const ocultarCinco = document.getElementById('pelicula4').classList.add('desaparece');
+	const popu = document.getElementById('pelicula').classList.remove('desaparece');
 
+	fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}`).then((res) => res.json()).then((data) => {
+		const movie = data.results;
+		const div = document.getElementById('pelicula');
 
-document.querySelector("#sec-popular").onclick = function (){
- 
-  const ocultar = document.getElementsByClassName("batman")[0].classList.add("desaparece");
-  const ocultarDos = document.querySelector("#see-allDos").classList.add("desaparece");
-  const ocultarDosA = document.querySelector("#see-allTres").classList.add("desaparece");
-  const ocultarDosB = document.querySelector("#see-allCuatro").classList.add("desaparece");
-  const ocultarTres = document.getElementById("pelicula2").classList.add("desaparece");
-  const ocultarCuatro = document.getElementById("pelicula3").classList.add("desaparece");
-  const ocultarCinco= document.getElementById("pelicula4").classList.add("desaparece");
-  const popu = document.getElementById("pelicula").classList.remove("desaparece");
+		for (let i = 5; i < movie.length; i++) {
+			if (i < 20) {
+				div.innerHTML += `<div class="peli" id="${movie[i].id}" onclick="crearModal(${movie[i]
+					.id})"><img src="https://image.tmdb.org/t/p/original${movie[i].poster_path}">
 
-  
-  fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}`)
-  .then(res => res.json())
-        .then(data =>{  
-  
-          const movie = data.results;
-          const div = document.getElementById("pelicula");
-  
-          for (let i = 5; i < movie.length; i++) {
-            if(i < 20){
-                div.innerHTML += `<div class="peli" id="${movie[i].id}" onclick="crearModal(this)"><img src="https://image.tmdb.org/t/p/original${movie[i].poster_path}">
+                <h1 class="titu-peli">${movie[i].original_title}</h1></div>`;
+			}
+		}
 
-                <h1 class="titu-peli">${movie[i].original_title}</h1></div>`
-             
-            }
-            
-            
-          }
-            
-          const boton = document.createElement ("button");
-          const papaBoton = document.querySelector("#pelicula");
-          papaBoton.appendChild(boton);
-          boton.innerHTML = "LOAD MORE";
-          boton.classList.add("boton");
-          document.querySelector("#sec-popular").onclick = function (){
-              // load more
-const boton = document.querySelector (".boton");
+		const boton = document.createElement('button');
+		const papaBoton = document.querySelector('#pelicula');
+		papaBoton.appendChild(boton);
+		boton.innerHTML = 'LOAD MORE';
+		boton.classList.add('boton');
+		document.querySelector('#sec-popular').onclick = function() {
+			// load more
+			const boton = document.querySelector('.boton');
 
-boton.addEventListener('click',function (){
-	paginaActual ++;
-	fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&page=${paginaActual}`)
-	.then (res => res.json())
-	.then (data =>{ 
-    
-        const movie = data.results;
-        
-		const contenedor = document.querySelector('#pelicula');
-		
+			boton.addEventListener('click', function() {
+				paginaActual++;
+				fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&page=${paginaActual}`)
+					.then((res) => res.json())
+					.then((data) => {
+						const movie = data.results;
 
-		for (let i = 5; i < Math.min(movie.length,20); i++) {
-		contenedor.innerHTML +=  `<div class="peli" id="${movie[i].id}" onclick="crearModal(this)"><img src="https://image.tmdb.org/t/p/original${movie[i].poster_path}">
+						const contenedor = document.querySelector('#pelicula');
 
-        <h1 class="titu-peli">${movie[i].original_title}</h1></div>`
-  }
-	})
-});
-          };
+						for (let i = 5; i < Math.min(movie.length, 20); i++) {
+							contenedor.innerHTML += `<div class="peli" id="${movie[i].id}" onclick="crearModal(${movie[
+								i
+							].id})"><img src="https://image.tmdb.org/t/p/original${movie[i].poster_path}">
 
-          
-
-          
-        })
-
-
-
-        
-}
-
+        <h1 class="titu-peli">${movie[i].original_title}</h1></div>`;
+						}
+					});
+			});
+		};
+	});
+};
 
 // aprieto boton lateral top rated
 
+document.querySelector('#sec-top').onclick = function() {
+	const ocultar = document.getElementsByClassName('batman')[0].classList.add('desaparece');
+	const ocultarDos = document.querySelector('#see-allUno').classList.add('desaparece');
+	const ocultarDosA = document.querySelector('#see-allTres').classList.add('desaparece');
+	const ocultarDosB = document.querySelector('#see-allCuatro').classList.add('desaparece');
+	const ocultarTres = document.getElementById('pelicula').classList.add('desaparece');
+	const ocultarCuatro = document.getElementById('pelicula3').classList.add('desaparece');
+	const ocultarCinco = document.getElementById('pelicula4').classList.add('desaparece');
+	const popu2 = document.getElementById('pelicula2').classList.remove('desaparece');
 
+	fetch(`https://api.themoviedb.org/3/movie/top_rated?api_key=${apiKey}`).then((res) => res.json()).then((data) => {
+		const movie = data.results;
+		const div = document.getElementById('pelicula2');
 
-document.querySelector("#sec-top").onclick = function (){
- 
-  const ocultar = document.getElementsByClassName("batman")[0].classList.add("desaparece");
-  const ocultarDos = document.querySelector("#see-allUno").classList.add("desaparece");
-  const ocultarDosA = document.querySelector("#see-allTres").classList.add("desaparece");
-  const ocultarDosB = document.querySelector("#see-allCuatro").classList.add("desaparece");
-  const ocultarTres = document.getElementById("pelicula").classList.add("desaparece");
-  const ocultarCuatro = document.getElementById("pelicula3").classList.add("desaparece");
-  const ocultarCinco= document.getElementById("pelicula4").classList.add("desaparece");
-  const popu2 = document.getElementById("pelicula2").classList.remove("desaparece");
-  
- 
-  
+		for (let i = 5; i < movie.length; i++) {
+			if (i < 20) {
+				div.innerHTML += `<div class="peli" id="${movie[i].id}" onclick="crearModal(${movie[i]
+					.id})"><img src="https://image.tmdb.org/t/p/original${movie[i].poster_path}">
 
- 
+                <h1 class="titu-peli">${movie[i].original_title}</h1></div>`;
+			}
+		}
 
-  
-  fetch(`https://api.themoviedb.org/3/movie/top_rated?api_key=${apiKey}`)
-  .then(res => res.json())
-        .then(data =>{ 
-  
-          const movie = data.results;
-          const div = document.getElementById("pelicula2");
-  
-          for (let i = 5; i < movie.length; i++) {
-            if(i < 20){
-                div.innerHTML += `<div class="peli" id="${movie[i].id}" onclick="crearModal(this)"><img src="https://image.tmdb.org/t/p/original${movie[i].poster_path}">
-
-                <h1 class="titu-peli">${movie[i].original_title}</h1></div>`
-             
-            }
-            
-            
-          }
-            
-          const boton = document.createElement ("button");
-          const papaBoton = document.querySelector("#pelicula2");
-          papaBoton.appendChild(boton);
-          boton.innerHTML = "LOAD MORE";
-          boton.classList.add("boton");
-          document.querySelector("#sec-top").onclick = function (){
-            
-          }
-        })
-
-}
-
+		const boton = document.createElement('button');
+		const papaBoton = document.querySelector('#pelicula2');
+		papaBoton.appendChild(boton);
+		boton.innerHTML = 'LOAD MORE';
+		boton.classList.add('boton');
+		document.querySelector('#sec-top').onclick = function() {};
+	});
+};
 
 // aprieto boton lateral up coming
 
+document.querySelector('#sec-up').onclick = function() {
+	const ocultar = document.getElementsByClassName('batman')[0].classList.add('desaparece');
+	const ocultarDos = document.querySelector('#see-allUno').classList.add('desaparece');
+	const ocultarDosA = document.querySelector('#see-allDos').classList.add('desaparece');
+	const ocultarDosB = document.querySelector('#see-allCuatro').classList.add('desaparece');
+	const ocultarTres = document.getElementById('pelicula').classList.add('desaparece');
+	const ocultarCuatro = document.getElementById('pelicula2').classList.add('desaparece');
+	const ocultarCinco = document.getElementById('pelicula4').classList.add('desaparece');
+	const popu3 = document.getElementById('pelicula3').classList.remove('desaparece');
 
+	fetch(`https://api.themoviedb.org/3/movie/top_rated?api_key=${apiKey}`).then((res) => res.json()).then((data) => {
+		const movie = data.results;
+		const div = document.getElementById('pelicula3');
 
-document.querySelector("#sec-up").onclick = function (){
- 
-  const ocultar = document.getElementsByClassName("batman")[0].classList.add("desaparece");
-  const ocultarDos = document.querySelector("#see-allUno").classList.add("desaparece");
-  const ocultarDosA = document.querySelector("#see-allDos").classList.add("desaparece");
-  const ocultarDosB = document.querySelector("#see-allCuatro").classList.add("desaparece");
-  const ocultarTres = document.getElementById("pelicula").classList.add("desaparece");
-  const ocultarCuatro = document.getElementById("pelicula2").classList.add("desaparece");
-  const ocultarCinco= document.getElementById("pelicula4").classList.add("desaparece");
-  const popu3 = document.getElementById("pelicula3").classList.remove("desaparece");
-  
-    
+		for (let i = 5; i < movie.length; i++) {
+			if (i < 20) {
+				div.innerHTML += `<div class="peli" id="${movie[i].id}" onclick="crearModal(${movie[i]
+					.id})"><img src="https://image.tmdb.org/t/p/original${movie[i].poster_path}">
 
-  
-  fetch(`https://api.themoviedb.org/3/movie/top_rated?api_key=${apiKey}`)
-  .then(res => res.json())
-        .then(data =>{ 
-  
-          const movie = data.results;
-          const div = document.getElementById("pelicula3");
-  
-          for (let i = 5; i < movie.length; i++) {
-            if(i < 20){
-                div.innerHTML += `<div class="peli" id="${movie[i].id}" onclick="crearModal(this)"><img src="https://image.tmdb.org/t/p/original${movie[i].poster_path}">
+                <h1 class="titu-peli">${movie[i].original_title}</h1></div>`;
+			}
+		}
 
-                <h1 class="titu-peli">${movie[i].original_title}</h1></div>`
-             
-            }
-            
-            
-          }
-            
-          const boton = document.createElement ("button");
-          const papaBoton = document.querySelector("#pelicula3");
-          papaBoton.appendChild(boton);
-          boton.innerHTML = "LOAD MORE";
-          boton.classList.add("boton");
-          document.querySelector("#sec-up").onclick = function (){
-            
-          }
-        })
-
-}
-
-
+		const boton = document.createElement('button');
+		const papaBoton = document.querySelector('#pelicula3');
+		papaBoton.appendChild(boton);
+		boton.innerHTML = 'LOAD MORE';
+		boton.classList.add('boton');
+		document.querySelector('#sec-up').onclick = function() {};
+	});
+};
 
 // aprieto boton lateral now playing
 
+document.querySelector('#sec-now').onclick = function() {
+	const ocultar = document.getElementsByClassName('batman')[0].classList.add('desaparece');
+	const ocultarDos = document.querySelector('#see-allUno').classList.add('desaparece');
+	const ocultarDosA = document.querySelector('#see-allTres').classList.add('desaparece');
+	const ocultarDosB = document.querySelector('#see-allDos').classList.add('desaparece');
+	const ocultarTres = document.getElementById('pelicula').classList.add('desaparece');
+	const ocultarCuatro = document.getElementById('pelicula3').classList.add('desaparece');
+	const ocultarCinco = document.getElementById('pelicula2').classList.add('desaparece');
+	const popu4 = document.getElementById('pelicula4').classList.remove('desaparece');
 
+	fetch(`https://api.themoviedb.org/3/movie/now_playing?api_key=${apiKey}`).then((res) => res.json()).then((data) => {
+		const movie = data.results;
+		const div = document.getElementById('pelicula4');
 
-document.querySelector("#sec-now").onclick = function (){
- 
+		for (let i = 5; i < movie.length; i++) {
+			if (i < 20) {
+				div.innerHTML += `<div class="peli" id="${movie[i].id}" onclick="crearModal(${movie[i]
+					.id})"><img src="https://image.tmdb.org/t/p/original${movie[i].poster_path}">
 
-  const ocultar = document.getElementsByClassName("batman")[0].classList.add("desaparece");
-  const ocultarDos = document.querySelector("#see-allUno").classList.add("desaparece");
-  const ocultarDosA = document.querySelector("#see-allTres").classList.add("desaparece");
-  const ocultarDosB = document.querySelector("#see-allDos").classList.add("desaparece");
-  const ocultarTres = document.getElementById("pelicula").classList.add("desaparece");
-  const ocultarCuatro = document.getElementById("pelicula3").classList.add("desaparece");
-  const ocultarCinco= document.getElementById("pelicula2").classList.add("desaparece");
-  const popu4 = document.getElementById("pelicula4").classList.remove("desaparece");
- 
+                <h1 class="titu-peli">${movie[i].original_title}</h1></div>`;
+			}
+		}
 
-  
-  fetch(`https://api.themoviedb.org/3/movie/now_playing?api_key=${apiKey}`)
-  .then(res => res.json())
-        .then(data =>{ 
-  
-          const movie = data.results;
-          const div = document.getElementById("pelicula4");
-  
-          for (let i = 5; i < movie.length; i++) {
-            if(i < 20){
-                div.innerHTML += `<div class="peli" id="${movie[i].id}" onclick="crearModal(this)"><img src="https://image.tmdb.org/t/p/original${movie[i].poster_path}">
+		const boton = document.createElement('button');
+		const papaBoton = document.querySelector('#pelicula4');
+		papaBoton.appendChild(boton);
+		boton.innerHTML = 'LOAD MORE';
+		boton.classList.add('boton');
+		document.querySelector('#sec-now').onclick = function() {};
+	});
+};
 
-                <h1 class="titu-peli">${movie[i].original_title}</h1></div>`
-             
-            }
-            
-            
-          }
-            
-          const boton = document.createElement ("button");
-          const papaBoton = document.querySelector("#pelicula4");
-          papaBoton.appendChild(boton);
-          boton.innerHTML = "LOAD MORE";
-          boton.classList.add("boton");
-          document.querySelector("#sec-now").onclick = function (){
-            
-          }
-        })
-
-}
-
-
-document.getElementById("logo").onclick = function (){
- 
-  const botonesMobile = document.querySelector(".modal-mobile").classList.remove("desaparece");
-  const ocultar = document.getElementsByClassName("batman")[0].classList.add("desaparece");
-  const ocultarDos = document.querySelector("#see-allUno").classList.remove("desaparece");
-  const ocultarDosA = document.querySelector("#see-allTres").classList.add("desaparece");
-  const ocultarDosB = document.querySelector("#see-allCuatro").classList.add("desaparece");
-  const ocultarTres = document.getElementById("pelicula").classList.remove("desaparece");
-  const ocultarCuatro = document.getElementById("pelicula3").classList.add("desaparece");
-  const ocultarCinco= document.getElementById("pelicula4").classList.add("desaparece");
-  const popu = document.getElementById("pelicula2").classList.add("desaparece");
- 
-
-}
-
-
+document.getElementById('logo').onclick = function() {
+	const botonesMobile = document.querySelector('.modal-mobile').classList.remove('desaparece');
+	const ocultar = document.getElementsByClassName('batman')[0].classList.add('desaparece');
+	const ocultarDos = document.querySelector('#see-allUno').classList.remove('desaparece');
+	const ocultarDosA = document.querySelector('#see-allTres').classList.add('desaparece');
+	const ocultarDosB = document.querySelector('#see-allCuatro').classList.add('desaparece');
+	const ocultarTres = document.getElementById('pelicula').classList.remove('desaparece');
+	const ocultarCuatro = document.getElementById('pelicula3').classList.add('desaparece');
+	const ocultarCinco = document.getElementById('pelicula4').classList.add('desaparece');
+	const popu = document.getElementById('pelicula2').classList.add('desaparece');
+};
 
 // buscador pelis input
 
@@ -422,214 +314,157 @@ input.addEventListener('keypress', function (e) {
 
 // Menú hamburguesa
 
-document.querySelector(".fas.fa-bars").onclick = function (){
-  
-  const botonesMobile = document.querySelector(".modal-mobile").classList.remove("desaparece");
-  const ocultar = document.getElementsByClassName("batman")[0].classList.add("desaparece");
-  const ocultarDos = document.querySelector("#see-allDos").classList.add("desaparece");
-  const ocultarDosA = document.querySelector("#see-allTres").classList.add("desaparece");
-  const ocultarDosB = document.querySelector("#see-allCuatro").classList.add("desaparece");
-  const ocultarTres = document.getElementById("pelicula2").classList.add("desaparece");
-  const ocultarCuatro = document.getElementById("pelicula3").classList.add("desaparece");
-  const ocultarCinco= document.getElementById("pelicula4").classList.add("desaparece");
-  const aparece = document.getElementById("pelicula").classList.remove("desaparece");
-  const apareceDos = document.getElementById("see-AllUno").classList.remove("desaparece");
-  
-  // Selecciono categoría
+document.querySelector('.fas.fa-bars').onclick = function() {
+	const botonesMobile = document.querySelector('.modal-mobile').classList.remove('desaparece');
+	const ocultar = document.getElementsByClassName('batman')[0].classList.add('desaparece');
+	const ocultarDos = document.querySelector('#see-allDos').classList.add('desaparece');
+	const ocultarDosA = document.querySelector('#see-allTres').classList.add('desaparece');
+	const ocultarDosB = document.querySelector('#see-allCuatro').classList.add('desaparece');
+	const ocultarTres = document.getElementById('pelicula2').classList.add('desaparece');
+	const ocultarCuatro = document.getElementById('pelicula3').classList.add('desaparece');
+	const ocultarCinco = document.getElementById('pelicula4').classList.add('desaparece');
+	const aparece = document.getElementById('pelicula').classList.remove('desaparece');
+	const apareceDos = document.getElementById('see-AllUno').classList.remove('desaparece');
 
-document.querySelector(".popu").onclick = function (){
-  fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}`)
-  .then(res => res.json())
-        .then(data =>{  
-  
-          const movie = data.results;
-          const div = document.getElementById("pelicula");
-  
-          for (let i = 5; i < movie.length; i++) {
-            if(i < 20){
-                div.innerHTML += `<div class="peli" id="${movie[i].id}" onclick="crearModal(this)"><img src="https://image.tmdb.org/t/p/original${movie[i].poster_path}">
+	// Selecciono categoría
 
-                <h1 class="titu-peli">${movie[i].original_title}</h1></div>`
-             
-            }
-            
-            
-          }
+	document.querySelector('.popu').onclick = function() {
+		fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}`).then((res) => res.json()).then((data) => {
+			const movie = data.results;
+			const div = document.getElementById('pelicula');
 
+			for (let i = 5; i < movie.length; i++) {
+				if (i < 20) {
+					div.innerHTML += `<div class="peli" id="${movie[i].id}" onclick="crearModal(${movie[i]
+						.id})"><img src="https://image.tmdb.org/t/p/original${movie[i].poster_path}">
 
-          const boton = document.createElement ("button");
-          const papaBoton = document.querySelector("#pelicula");
-          papaBoton.appendChild(boton);
-          boton.innerHTML = "LOAD MORE";
-          boton.classList.add("boton");
-          document.querySelector("#sec-popular").onclick = function (){
-            
-          }
-}
+                <h1 class="titu-peli">${movie[i].original_title}</h1></div>`;
+				}
+			}
 
-        )}
-  
-  
-}
+			const boton = document.createElement('button');
+			const papaBoton = document.querySelector('#pelicula');
+			papaBoton.appendChild(boton);
+			boton.innerHTML = 'LOAD MORE';
+			boton.classList.add('boton');
+			document.querySelector('#sec-popular').onclick = function() {};
+		});
+	};
+};
 
+document.querySelector('.fas.fa-bars').onclick = function() {
+	const botonesMobile = document.querySelector('.modal-mobile').classList.remove('desaparece');
+	const ocultar = document.getElementsByClassName('batman')[0].classList.add('desaparece');
+	const ocultarDos = document.querySelector('#see-allUno').classList.add('desaparece');
+	const ocultarDosA = document.querySelector('#see-allTres').classList.remove('desaparece');
+	const ocultarDosB = document.querySelector('#see-allCuatro').classList.add('desaparece');
+	const ocultarTres = document.getElementById('pelicula').classList.add('desaparece');
+	const ocultarCuatro = document.getElementById('pelicula3').classList.remove('desaparece');
+	const ocultarCinco = document.getElementById('pelicula4').classList.add('desaparece');
+	const popu = document.getElementById('pelicula3').classList.remove('desaparece');
+};
 
+// Selecciono categoría
 
+document.querySelector('.rated').onclick = function() {
+	fetch(`https://api.themoviedb.org/3/movie/top_rated?api_key=${apiKey}`).then((res) => res.json()).then((data) => {
+		const movie = data.results;
+		const div = document.getElementById('pelicula2');
 
+		for (let i = 5; i < movie.length; i++) {
+			if (i < 20) {
+				div.innerHTML += `<div class="peli" id="${movie[i].id}" onclick="crearModal(${movie[i]
+					.id})"><img src="https://image.tmdb.org/t/p/original${movie[i].poster_path}">
 
+                        <h1 class="titu-peli">${movie[i].original_title}</h1></div>`;
+			}
+		}
 
-        document.querySelector(".fas.fa-bars").onclick = function (){
-          const botonesMobile = document.querySelector(".modal-mobile").classList.remove("desaparece");
-          const ocultar = document.getElementsByClassName("batman")[0].classList.add("desaparece");
-          const ocultarDos = document.querySelector("#see-allUno").classList.add("desaparece");
-          const ocultarDosA = document.querySelector("#see-allTres").classList.remove("desaparece");
-          const ocultarDosB = document.querySelector("#see-allCuatro").classList.add("desaparece");
-          const ocultarTres = document.getElementById("pelicula").classList.add("desaparece");
-          const ocultarCuatro = document.getElementById("pelicula3").classList.remove("desaparece");
-          const ocultarCinco= document.getElementById("pelicula4").classList.add("desaparece");
-          const popu = document.getElementById("pelicula3").classList.remove("desaparece");
-          
-        }
-        
-        // Selecciono categoría
-        
-        document.querySelector(".rated").onclick = function (){
-          fetch(`https://api.themoviedb.org/3/movie/top_rated?api_key=${apiKey}`)
-          .then(res => res.json())
-                .then(data =>{ ; 
-          
-                  const movie = data.results;
-                  const div = document.getElementById("pelicula2");
-          
-                  for (let i = 5; i < movie.length; i++) {
-                    if(i < 20){
-                        div.innerHTML += `<div class="peli" id="${movie[i].id}" onclick="crearModal(this)"><img src="https://image.tmdb.org/t/p/original${movie[i].poster_path}">
+		const botonesMobile = document.querySelector('.modal-mobile').classList.add('desaparece');
 
-                        <h1 class="titu-peli">${movie[i].original_title}</h1></div>`
-                     
-                    }
-                    
-                    
-                  }
-        
-                  const botonesMobile = document.querySelector(".modal-mobile").classList.add("desaparece");
-        
-                  const boton = document.createElement ("button");
-                  const papaBoton = document.querySelector("#pelicula2");
-                  papaBoton.appendChild(boton);
-                  boton.innerHTML = "LOAD MORE";
-                  boton.classList.add("boton");
-                  document.querySelector("#sec-top").onclick = function (){
-                    
-                  }
-        }
-        
-                )}   
-                
-                
+		const boton = document.createElement('button');
+		const papaBoton = document.querySelector('#pelicula2');
+		papaBoton.appendChild(boton);
+		boton.innerHTML = 'LOAD MORE';
+		boton.classList.add('boton');
+		document.querySelector('#sec-top').onclick = function() {};
+	});
+};
 
-                document.querySelector(".now").onclick = function (){
-                  fetch(`https://api.themoviedb.org/3/movie/now_playing?api_key=${apiKey}`)
-                  .then(res => res.json())
-                        .then(data =>{ ; 
-                  
-                          const movie = data.results;
-                          const div = document.getElementById("pelicula3");
-                  
-                          for (let i = 5; i < movie.length; i++) {
-                            if(i < 20){
-                                div.innerHTML += `<div class="peli" id="${movie[i].id}" onclick="crearModal(this)"><img src="https://image.tmdb.org/t/p/original${movie[i].poster_path}">
+document.querySelector('.now').onclick = function() {
+	fetch(`https://api.themoviedb.org/3/movie/now_playing?api_key=${apiKey}`).then((res) => res.json()).then((data) => {
+		const movie = data.results;
+		const div = document.getElementById('pelicula3');
 
-                                <h1 class="titu-peli">${movie[i].original_title}</h1></div>`
-                             
-                            }
-                            
-                            
-                          }
-                
-                          const botonesMobile = document.querySelector(".modal-mobile").classList.add("desaparece");
-                
-                          const boton = document.createElement ("button");
-                          const papaBoton = document.querySelector("#pelicula3");
-                          papaBoton.appendChild(boton);
-                          boton.innerHTML = "LOAD MORE";
-                          boton.classList.add("boton");
-                          document.querySelector("#sec-now").onclick = function (){
-                            
-                          }
-                }
-                
-                        )}                   
+		for (let i = 5; i < movie.length; i++) {
+			if (i < 20) {
+				div.innerHTML += `<div class="peli" id="${movie[i].id}" onclick="crearModal(${movie[i]
+					.id})"><img src="https://image.tmdb.org/t/p/original${movie[i].poster_path}">
 
+                                <h1 class="titu-peli">${movie[i].original_title}</h1></div>`;
+			}
+		}
+
+		const botonesMobile = document.querySelector('.modal-mobile').classList.add('desaparece');
+
+		const boton = document.createElement('button');
+		const papaBoton = document.querySelector('#pelicula3');
+		papaBoton.appendChild(boton);
+		boton.innerHTML = 'LOAD MORE';
+		boton.classList.add('boton');
+		document.querySelector('#sec-now').onclick = function() {};
+	});
+};
 
 // click en pelicula para que aparezca el modal
-crearModal = (div) => {
-     const modal = document.querySelector("#movie-pop").classList.remove("desaparece");
+const crearModal = (movieId) => {
+	const modal = document.querySelector('#movie-pop').classList.remove('desaparece');
+	fetch(`https://api.themoviedb.org/3/movie/${movieId}popular?api_key=${apiKey}`)
+		.then((res) => res.json())
+		.then((data) => {
+			const movie = data;
+			const modal = document.getElementById('movie-pop');
 
-     fetch(`https://api.themoviedb.org/3/movie/${movieId}popular?api_key=${apiKey}`)
-                  .then(res => res.json())
-                        .then(data =>{ console.log(movieId);
+			let genres = '';
+			for (let i = 0; i < movie.genres.length; i++) {
+				genres += `${movie.genres[i].name}, `;
+			}
+
+			modal.innerHTML = `<div class="data">	
+                    <div class="poster">
                         
-                  
-                          const movie = data.results;
-                          const modal = document.getElementById("movie-pop");
-                  
-                          for(let i=0; i < movie.length; i++ )  {
-                            if(i < 20){
-                             //console.log(movie[i].id);
-
-                           /* const pelititu = document.querySelector(".peli-titu");
-                            pelititu.innerHTML = `<h1 class="peli-titu" >${movie[i].original_title}</h1></div>`
-                            const sinopsis = document.querySelector(".sinopsis") ;                       
-                            sinopsis.innerHTML = `<div class="sinopsis">${movie[i].overview}</div>`*/
-
-                         modal.innerHTML = 	`<div class="data">	
-						
-                            <div class="poster">
-                               
-                            </div>	
-                            <div class="data-peli">
-                  
-                              <div class="titular">
-                                <h1 class="peli-titu">${movie[i].original_title}</h1>
-                              </div>
-                  
-                              <div class="sinopsis">${movie[i].overview}
-                                  
-                                      <h1 class="peli-tituUno">Genre</h1>
-                                      <span class="bajada-titu">${movie[i].genre_ids}
-                                        </span>
-                                      <h1 class="peli-tituUno">Release date</h1>
-                                      <span class="bajada-titu">${movie[i].release_date}</span>
-                                    
-                              </div>
-                  
-                            </div>
-                  
-                            <div class= "peli-foto">	
-                            <i class="fas fa-times" id="cruz"></i>
-                          <img class="bg-modal"  src="${movie[i].backdrop_path}"> 
-                            </div>
-                  
-                            
-                  
-                          </div>`
+                    </div>	
+                    <div class="data-peli">
+          
+                      <div class="titular">
+                        <h1 class="peli-titu">${movie.original_title}</h1>
+                      </div>
+          
+                      <div class="sinopsis">${movie.overview}
                           
-                        }   
+                              <h1 class="peli-tituUno">Genre</h1>
+                              ${genres.substring(0, genres.length - 2)}
+                              <span class="bajada-titu">
+
+                                </span>
+                              <h1 class="peli-tituUno">Release date</h1>
+                              <span class="bajada-titu">${movie.release_date}</span>
                             
-                          }      
+                      </div>
+          
+                    </div>
+          
+                    <div class= "peli-foto">	
+                    <i class="fas fa-times" id="cruz"></i>
+                  <img class="bg-modal"  src="${movie.backdrop_path}"> 
+                    </div>
+                  </div>`;
+		});
+};
 
-                        } ) }
-     
-     
-     
-                        document.querySelector("#movie-pop").onclick = function (){
-                          const modal = document.querySelector("#movie-pop").classList.add("desaparece");
-                    
-                    
-                         }
-     
-
-
+document.querySelector('#movie-pop').onclick = function() {
+	const modal = document.querySelector('#movie-pop').classList.add('desaparece');
+};
 
 /*
      
@@ -666,14 +501,5 @@ input.addEventListener('keypress', function (e) {
             })
     }
 });*/
-
-
-
-
-
-
-
-
-
 
 //para displeynonear secciones ul.style.display = "none"
