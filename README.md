@@ -3,6 +3,8 @@
 Trabajo Práctico JS - DOM
 Generar una página según el modelo del mockup, tanto mobile, como desktop (ejemplo real: https://ada-trabajo-practico-3-ahewymdcrw.now.sh/).
 
+<b>VER INTERFACE Y FUNCIONALIDADES DEL PROYECTO:</b> https://maruucomerci.github.io/javascript-pelis/
+
 Dentro de la carpeta assets van a encontrar todas las imagenes necesarias.
 
 La API para extraer la información es: https://api.themoviedb.org
